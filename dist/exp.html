@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./fullpage.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section"></div>
+    </div>
+    <style>
+      .hover\:transform-scale-subtle:hover {
+        transform: scale(1.03);
+      }
+      .transition-normal {
+        transition: 0.2s ease-in-out;
+      }
+      .hover\:show-child:hover .hover\:block {
+        display: block;
+      }
+    </style>
+
+    <script src="./fullpage.min.js"></script>
+    <script src="./app.js"></script>
+    <script>
+      document.getElementById("hamburger").onclick = function toggleMenu() {
+        const navToggle = document.getElementsByClassName("toggle");
+        for (let i = 0; i < navToggle.length; i++) {
+          navToggle.item(i).classList.toggle("hidden");
+        }
+      };
+    </script>
+  </body>
+</html>
